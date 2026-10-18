@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#58cc02" />
+  <meta name="description" content="Academia interactiva de inglés, francés y portugués brasileño: 30 días por idioma, audio, tarjetas, retos, evaluaciones y progreso independiente." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="LingoPop" />
+  <meta name="application-name" content="LingoPop" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>LingoPop · Inglés, francés y portugués en 30 días</title>
+</head>
+<body>
+  <div class="app-shell" id="app">
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <div class="brand-icon"><span>L</span><i>•</i></div>
+        <div><div class="brand-title">lingo<span>pop</span><span class="brand-punct">.</span></div><p class="brand-caption">Aprende jugando</p></div>
+        <button class="mobile-close icon-btn" id="close-sidebar" aria-label="Cerrar menú">✕</button>
+      </div>
+      <div class="sidebar-stat"><div class="eyebrow">TU OBJETIVO</div><div class="side-total" id="side-total">0 <span>/ 30 días</span></div><div class="progress-track"><div id="side-bar" class="progress-fill"></div></div><p>Un paso al día te lleva más lejos.</p></div>
+      <div class="nav-title"><span>PLAN DE 30 DÍAS</span><span id="nav-lang-flag">🇧🇷</span></div>
+      <nav id="days-nav" aria-label="Días del curso"></nav>
+      <div class="sidebar-footer"><span class="footer-dot"></span> Se guarda en este dispositivo<br /><span>Sin registro · Sin anuncios</span></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div class="topbar-left"><button class="menu-btn icon-btn" id="open-sidebar" aria-label="Abrir lecciones">☰</button><div class="top-kicker"><span class="status-dot"></span> TU ESPACIO DE APRENDIZAJE <span class="top-divider">/</span> 30 DÍAS</div></div><div class="top-actions"><span class="connection" id="connection-indicator">● Disponible</span><button class="install-btn" id="install-btn">⇩ <span>Instalar app</span></button></div></header>
+      <div class="content">
+        <div class="language-header"><div><p class="micro-heading">SELECCIONA TU IDIOMA</p><div class="lang-switcher" id="lang-switcher" role="group" aria-label="Idioma del curso"><button data-lang="pt" class="lang-btn selected">🇧🇷 Portugués</button><button data-lang="en" class="lang-btn">🇺🇸 Inglés</button><button data-lang="fr" class="lang-btn">🇫🇷 Francés</button></div></div><p class="language-caption">3 idiomas · 90 lecciones · 450 expresiones</p></div>
+        <section class="hero"><div class="hero-content"><div class="eyebrow"><span class="sparkle">✦</span> TU RETO PERSONAL DE 30 DÍAS</div><h1 id="hero-title">Aprende a <em>conversar.</em><br />Un día a la vez.</h1><p id="hero-description">20 minutos diarios, frases útiles y evaluaciones reales. Aprende desde cero con explicaciones en español.</p><div class="hero-meta"><span>◷ 20 min al día</span><span>✓ 5 expresiones por lección</span><span>♫ Audio por frase</span></div></div><div class="hero-art" aria-label="Progreso del idioma"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="progress-orb"><b id="hero-count">00</b><span>días<br />aprobados</span></div><span class="orbit-star">✧</span></div></section>
+        <div class="stats"><div class="stat"><span class="stat-symbol">▦</span><div><strong id="stat-days">0 / 30</strong><small>Días aprobados</small></div></div><div class="stat"><span class="stat-symbol">❞</span><div><strong id="stat-phrases">0</strong><small>Expresiones aprendidas</small></div></div><div class="stat"><span class="stat-symbol">◎</span><div><strong id="stat-score">—</strong><small>Mejor precisión</small></div></div></div>
+        <div class="lesson-heading"><div><div class="eyebrow">CONTINÚA TU RUTA</div><h2 id="today-title">Lección del día 1</h2><p id="today-theme">Comienza con expresiones útiles</p></div><div class="stepper"><button class="step-button" id="prev-day" aria-label="Día anterior">‹</button><span id="day-counter">DÍA 01 / 30</span><button class="step-button" id="next-day" aria-label="Día siguiente">›</button></div></div>
+        <div class="workspace"><section class="study-card"><div class="tabs" role="tablist" aria-label="Secciones"><button data-tab="lesson" class="tab selected" role="tab">◈ <span>Lección</span></button><button data-tab="quiz" class="tab" role="tab">◉ <span>Evaluación</span></button><button data-tab="cards" class="tab" role="tab">▤ <span>Tarjetas</span></button><button data-tab="path" class="tab" role="tab">▦ <span>Mi ruta</span></button></div><div id="tab-body" class="tab-body"></div></section>
+        <aside class="right-column"><section class="side-card"><div class="eyebrow">TU RUTINA DIARIA</div><h3>20 minutos <em>que cuentan.</em></h3><div class="routine"><span>🎧</span><div><strong>04 min · Escucha</strong><p>Escucha y repite cada expresión.</p></div></div><div class="routine"><span>📖</span><div><strong>08 min · Aprende</strong><p>Entiende el vocabulario y la regla.</p></div></div><div class="routine"><span>🧠</span><div><strong>05 min · Comprueba</strong><p>Resuelve 5 preguntas y gana el día.</p></div></div><div class="routine"><span>🗣️</span><div><strong>03 min · Practica</strong><p>Escribe y habla en el nuevo idioma.</p></div></div><button class="btn btn-outline full" id="listen-all">♫ Escuchar las 5 frases</button></section>
+        <section class="side-card"><div class="eyebrow">MISIÓN DIARIA</div><h3>Escribe en el idioma.</h3><p class="prompt" id="mission-prompt"></p><label class="sr-only" for="mission-answer">Tu respuesta</label><input id="mission-answer" class="mission-input" placeholder="Escribe aquí tu traducción..." spellcheck="false" autocomplete="off"/><button class="btn btn-primary full" id="mission-check">Comprobar respuesta →</button><div id="mission-feedback" aria-live="polite"></div></section>
+        <section class="side-card"><div class="eyebrow">PRONUNCIACIÓN</div><h3>Un detalle importante</h3><p id="pron-tip" class="tip-copy"></p></section></aside></div>
+        <footer class="page-footer">LingoPop · 90 lecciones prácticas. No garantiza fluidez en 30 días: combina estas lecciones con escucha y conversación reales. <button id="show-backup" class="text-link">Respaldar mis avances ↗</button></footer>
+      </div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="app-dialog" class="modal"><div id="dialog-body"></div><form method="dialog"><button class="btn btn-outline full">Cerrar</button></form></dialog>
+  <input type="file" id="import-file" accept="application/json,.json" hidden />
+  <script src="/courses.js"></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>

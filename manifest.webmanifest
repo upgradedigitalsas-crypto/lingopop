@@ -1,0 +1,31 @@
+{
+  "id": "/",
+  "name": "LingoPop World · Aprende idiomas viviendo aventuras",
+  "short_name": "LingoPop",
+  "description": "Una sola aventura narrativa para aprender francés, inglés y portugués: explora ciudades, conoce personajes y resuelve misiones con lecciones integradas.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f4f8ff",
+  "theme_color": "#25bd71",
+  "lang": "es",
+  "orientation": "portrait-primary",
+  "categories": [
+    "education",
+    "games"
+  ],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
