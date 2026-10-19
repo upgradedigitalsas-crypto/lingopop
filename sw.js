@@ -1,5 +1,5 @@
-const CACHE='lingopop-v3-storyworld-20261018';
-const FILES=['/','/index.html','/game.css','/home.css','/game.js','/scene3d.js','/courses.js','/manifest.webmanifest','/icons/icon-192.png','/icons/icon-512.png','/iconography/profesora-lingopop.webp','/iconography/profesora-hero.webp','/iconography/adventure-world.webp','/iconography/paris-story-map.webp'];
+const CACHE='lingopop-v3-storyworld-20261019';
+const FILES=['/','/index.html','/game.css','/home.css','/game.js','/scene3d.js','/courses.js','/story.js','/manifest.webmanifest','/icons/icon-192.png','/icons/icon-512.png','/iconography/profesora-lingopop.webp','/iconography/profesora-hero.webp','/iconography/adventure-world.webp','/iconography/paris-story-map.webp'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(FILES)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(a=>Promise.all(a.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('fetch',e=>{const req=e.request;if(req.method!=='GET'||new URL(req.url).origin!==location.origin)return;e.respondWith(fetch(req).then(res=>{if(res.ok){let r=res.clone();e.waitUntil(caches.open(CACHE).then(c=>c.put(req,r)))}return res}).catch(()=>caches.match(req).then(c=>c||(req.mode==='navigate'?caches.match('/index.html'):Response.error()))))});

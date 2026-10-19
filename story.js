@@ -1,0 +1,136 @@
+/* LingoPop · Narrative data.
+   Premise: La Bruma del Silencio cubre los tres mundos. Las palabras son la energía que mantiene vivos
+   los colores y recuerdos de cada ciudad. Cada misión superada disipa la bruma y enciende una Estrella de Memoria.
+   Each mission = [npc, title, setup (what the NPC needs), thanks (NPC reaction + world change)].
+   Courses (courses.js) keep the pedagogic content; this file only provides story context. */
+window.STORY_DATA={
+ premise:'Una Bruma del Silencio cubre el mundo: la gente olvida sus palabras y, con ellas, sus colores y recuerdos. Tú eres un Recuperador de Palabras: cada frase que dices en su contexto real disipa la bruma y enciende una Estrella de Memoria.',
+ arcs:[
+  {name:'La llegada',quote:'«Una sola palabra amable abre la primera puerta».',desc:'Rompe el hielo: saluda, preséntate y gana la confianza de los vecinos.'},
+  {name:'El pulso de la ciudad',quote:'«Quien sabe pedir, sabe pertenecer».',desc:'Cafés, mercados y calles: pide, paga y encuentra tu camino.'},
+  {name:'El gran desvío',quote:'«Perderse también es una forma de aprender».',desc:'Estaciones, hoteles y rutinas: muévete y cuenta tu día.'},
+  {name:'Lazos y secretos',quote:'«Las historias se cuentan entre dos».',desc:'Pregunta, siente y recuerda: los vecinos confían sus secretos.'},
+  {name:'El gran clímax',quote:'«Ahora tu voz sostiene la ciudad».',desc:'Trabajo, acuerdos y discursos: la ciudad entera te escucha.'},
+  ],
+ fr:{
+  name:'El secreto de la Linterna de las Sombras',world:'París Pop',
+  npc:{teacher:'Profesora Pop',florist:'Camille',cafe:'Pierre',station:'Hugo',shop:'Élise'},
+  intro:'El Gran Farol de París se apagó y el Sena murmura frases incompletas. Solo un Recuperador de Palabras puede devolverle la luz.',
+  finale:'¡París brilla otra vez! Recitaste el Gran Juramento de la Amistad y cada farola despertó con tu voz.',
+  missions:[
+   ['teacher','La primera farola','La profesora perdió la primera estrella del mapa. Un buen «Bonjour» puede reavivarla.','Bonjour… y la primera farola parpadea. La plaza ya no está tan gris.'],
+   ['florist','La florista sin nombre','Camille olvidó cómo presentarse y sus flores se marchitan. Ayúdala a decir quién es.','Camille recupera su nombre y un girasol vuelve a abrir en su puesto.'],
+   ['cafe','La palabra amable','Pierre atiende a un crítico gastronómico, pero olvidó las palabras de cortesía.','El crítico sonríe. La puerta del café se ilumina con un cálido tono dorado.'],
+   ['shop','Los números escondidos','Élise guarda cuatro cajas con números secretos. Cuéntalas con ella para abrirlas.','Las cajas se abren y los precios vuelven a brillar en el escaparate.'],
+   ['station','El reloj detenido','El reloj de la estación marca siempre la misma hora. Hugo necesita días y horas.','El reloj da una campanada: ¡el tiempo vuelve a correr en París!'],
+   ['teacher','Los amigos del barrio','La profesora organiza una reunión de amigos y necesita hablar de las familias de la zona.','Los vecinos salen a la calle. Termina el primer arco: la plaza vuelve a tener color.'],
+   ['florist','Una charla de verdad','Camille quiere conversar contigo para contarte una pista, pero tiene pocas palabras.','Camille susurra la pista y una nueva calle se ilumina en el mapa.'],
+   ['cafe','El café de bienvenida','La bruma borró la receta del café de la casa. Pide uno como se hace en París.','El aroma regresa y las terrazas se llenan de vida.'],
+   ['cafe','La mesa del último rincón','Un grupo de viajeros no puede pedir su cena. Ayuda a Pierre en el comedor.','La cocina se enciende y el menú del día reaparece en la pizarra.'],
+   ['shop','El mercado de los colores','Élise vende telas y regalos, pero ya nadie sabe regatear ni preguntar precios.','Los toldos del mercado recuperan su color y suena un acordeón.'],
+   ['station','El mapa sin calles','Hugo debe guiar a un turista perdido y olvidó cómo indicar la derecha y la izquierda.','Las calles reaparecen en el mapa: ¡una ruta nueva hacia el Sena!'],
+   ['station','El tren de la esperanza','El tren nocturno no sale hasta que alguien pida un billete con claridad.','El tren pita y arranca. El andén se llena de luz tibia.'],
+   ['florist','La habitación de las estrellas','Camille gestiona una pequeña posada y un huésped llega a medianoche sin reserva visible.','El huésped duerme tranquilo y una estrella brilla en la ventana de la posada.'],
+   ['station','Revisión del gran desvío','Un viaje entero lleno de contratiempos: ayuda a Hugo a resolverlos con calma.','Los carteles del andén se encienden: has superado el gran desvío.'],
+   ['florist','Un día en París','Camille te pide que le cuentes cómo es un día normal para ti.','Camille te cuenta su rutina y su jardín florece en primavera.'],
+   ['teacher','Los verbos del faro','Los verbos esenciales se apagaron: sin ellos nadie puede contar quién es ni qué quiere.','Los verbos regresan como luciérnagas y rodean el faro.'],
+   ['shop','Preguntas para Élise','Élise tiene secretos, pero solo los cuenta si sabes hacer las preguntas correctas.','Élise abre un cofre de postales antiguas. ¡Ya conoces su historia!'],
+   ['florist','La lluvia de Camille','El clima cambió de repente y Camille quiere hablar de la lluvia y del sol.','Un arcoíris cruza la calle. París recupera su cielo.'],
+   ['cafe','Lo que siente París','Pierre está inquieto y necesita expresar emociones y opiniones.','Pierre ríe por primera vez en semanas. El café se llena de música.'],
+   ['station','Lo que pasó ayer','Hugo vio algo extraño anoche. Ayúdalo a recordar lo que pasó, en pasado.','Hugo recuerda la pista y descubre una puerta oculta bajo el reloj.'],
+   ['teacher','El gran balance','Una pequeña asamblea de vecinos te pide contar lo vivido hasta hoy.','Los vecinos aplauden. Termina el cuarto arco: ya eres parte de París.'],
+   ['shop','Los planes de Élise','Élise quiere abrir una tienda nueva y necesita hablar de planes futuros.','Se inaugura la tienda: farolas encendidas en toda la calle.'],
+   ['station','Una llamada urgente','Hugo recibe un mensaje urgente de otra estación. Responde con claridad.','La señal se restablece y los trenes vuelven a conectarse.'],
+   ['shop','El taller de París','Élise dirige un taller de marcas locales y recibe un nuevo equipo de trabajo.','El taller abre sus persianas y la ciudad respira trabajo y creatividad.'],
+   ['teacher','La reunión decisiva','La profesora convoca a los líderes de la ciudad para decidir cómo reavivar la linterna.','Todos aprueban el plan y la linterna deja ver su primer destello.'],
+   ['florist','La campaña de la luz','Camille lanza una campaña para invitar a toda la ciudad a la gran fiesta.','El mensaje se comparte y miles de ventanas se iluminan.'],
+   ['shop','Los números de la fiesta','Élise necesita medir resultados: cuánta gente vendrá y qué hay que preparar.','Los indicadores suben y el escenario central queda listo.'],
+   ['cafe','El gran acuerdo','Pierre debe negociar con proveedores para que la fiesta no se detenga.','Se firma el acuerdo y las mesas de la plaza se llenan de manjares.'],
+   ['teacher','Tu historia en París','La profesora te pide contar tu propia historia profesional ante la ciudad.','La plaza escucha en silencio y la bruma empieza a retirarse.'],
+   ['teacher','El Gran Juramento','Todo París espera tu discurso final. Reúne todo lo aprendido y recita el Juramento de la Amistad.','La Linterna de las Sombras se enciende: ¡París brilla gracias a tu voz!']
+  ]
+ },
+ en:{
+  name:'El enigma del Gran Reloj Silencioso',world:'Londres Pop',
+  npc:{teacher:'Teacher Pop',florist:'Ava',cafe:'Oliver',station:'Henry',shop:'Emma'},
+  intro:'El Gran Reloj de Londres calló: sin palabras de cortesía ni horas, la ciudad vive atrapada en un domingo lluvioso. Solo un Recuperador de Palabras puede devolverle la campanada.',
+  finale:'¡Las campanas suenan! Sincronizaste el Gran Péndulo y Londres vuelve a avanzar con tu voz.',
+  missions:[
+   ['teacher','La primera campanada','El Gran Reloj perdió su primera campanada. Un «Hello!» puede hacerla sonar de nuevo.','Dong… la primera campanada resuena sobre el Támesis.'],
+   ['florist','Un nombre en la niebla','Ava encontró una pista pero perdió las palabras para presentarse. Ayúdala.','Ava te sonríe y comparte su primera pista.'],
+   ['cafe','La taza de la cortesía','Oliver sirve té a un visitante exigente, pero olvidó el «please» y el «thank you».','La tetera silba de alegría y el salón de té vuelve a abrirse.'],
+   ['shop','Los números de la caja','Emma encontró cajas con números escondidos. Cuéntalas para abrirlas.','Las cajas se abren y los precios regresan a las vitrinas.'],
+   ['station','El día del tren','Henry no sabe qué día sale el próximo tren. Ayúdalo con días y horas.','El tablero de horarios parpadea y el tren llega puntual.'],
+   ['teacher','La reunión sorpresa','La profesora reúne a los vecinos y necesita hablar de familias y amistades.','Aplausos en la calle. Termina el primer arco: Londres despierta.'],
+   ['florist','Una charla bajo la lluvia','Ava quiere conversar contigo bajo el paraguas para contarte un secreto.','Ava susurra la pista y una nueva calle aparece en el mapa.'],
+   ['cafe','Un café para el inspector','Oliver debe atender a un inspector y necesita pedir con elegancia.','El inspector sonríe y deja una pista junto a la taza.'],
+   ['cafe','La cena en Baker Street','Un grupo de viajeros no logra pedir su cena. Ayuda a Oliver.','La cocina recupera su aroma y el menú del día aparece en la pizarra.'],
+   ['shop','El mercado encantado','Emma vende objetos curiosos y nadie sabe preguntar precios ni pagar.','Los puestos del mercado se encienden uno a uno.'],
+   ['station','El mapa sin calles','Henry debe guiar a un turista perdido y olvidó las direcciones.','Las calles se dibujan en el mapa: aparece la ruta al río.'],
+   ['station','El tren de las siete','El tren nocturno no parte sin un billete bien pedido.','El silbato suena y el andén se llena de vapor cálido.'],
+   ['florist','La habitación 221','Ava gestiona una posada y un huésped llega sin reserva a medianoche.','El huésped duerme feliz y la ventana de la posada se ilumina.'],
+   ['station','Revisión del desvío','Un viaje entero con contratiempos: ayuda a Henry a resolverlos con calma.','Los carteles del andén se encienden: superaste el gran desvío.'],
+   ['florist','Un día en Londres','Ava quiere saber cómo es un día normal para ti.','Ava comparte su rutina y su invernadero brilla de nuevo.'],
+   ['teacher','Los verbos del reloj','Los verbos esenciales se detuvieron junto a las agujas del reloj.','Los verbos giran como engranajes y el reloj tiembla.'],
+   ['shop','Las preguntas de Emma','Emma tiene secretos y solo los revela a quien pregunta bien.','Emma abre un cofre con postales victorianas.'],
+   ['florist','El clima de Ava','El tiempo cambió de golpe y Ava quiere hablar de lluvia y sol.','Un arcoíris cruza el puente: Londres recupera su cielo.'],
+   ['cafe','Lo que siente Londres','Oliver está inquieto y necesita expresar emociones y opiniones.','Oliver sonríe por primera vez en semanas.'],
+   ['station','Lo que pasó ayer','Henry vio algo extraño anoche. Ayúdalo a recordar en pasado.','Henry recuerda y descubre una puerta bajo el reloj.'],
+   ['teacher','El gran balance','Los vecinos te piden contar tu aventura hasta hoy.','Aplauden. Termina el cuarto arco: ya eres parte de Londres.'],
+   ['shop','Los planes de Emma','Emma planea abrir una nueva sucursal y necesita hablar de futuro.','Se inaugura la tienda y las farolas se encienden.'],
+   ['station','Una llamada urgente','Henry recibe una llamada y un mensaje urgentes de otra estación.','La señal se restablece y los trenes se conectan.'],
+   ['shop','La oficina del Támesis','Emma lidera un equipo nuevo y necesita presentarse en su oficina.','La oficina abre sus ventanas y la ciudad respira trabajo.'],
+   ['teacher','La reunión decisiva','La profesora convoca a los líderes para decidir cómo reactivar el reloj.','Aprueban el plan y el péndulo se balancea una vez.'],
+   ['florist','La campaña de la campanada','Ava lanza una campaña para invitar a toda la ciudad a la gran fiesta.','El mensaje se comparte y las ventanas se iluminan.'],
+   ['shop','Los números de la fiesta','Emma necesita medir resultados y presupuesto para el gran evento.','Los indicadores suben y el escenario queda listo.'],
+   ['cafe','El gran acuerdo','Oliver debe negociar con proveedores para que no falte nada en la fiesta.','Se cierra el trato y las mesas se llenan de pastelitos.'],
+   ['teacher','Tu historia en Londres','La profesora te pide contar tu historia profesional ante la ciudad.','La plaza escucha en silencio y la niebla se retira.'],
+   ['teacher','La última campanada','Todo Londres espera tu discurso final. Reúne todo lo que aprendiste.','El Gran Reloj suena: ¡Londres vuelve a avanzar gracias a ti!']
+  ]
+ },
+ pt:{
+  name:'La canción perdida de la Bahía',world:'Río Pop',
+  npc:{teacher:'Professora Pop',florist:'Camila',cafe:'Pedro',station:'Hugo',shop:'Elisa'},
+  intro:'La canción más bella de Río se rompió en notas perdidas por toda la ciudad. Sin palabras amables ni ritmo, el carnaval no puede comenzar.',
+  finale:'¡Suena la samba! Reuniste todas las notas y Río canta de nuevo con tu voz.',
+  missions:[
+   ['teacher','La primera nota','La profesora perdió la primera nota de la canción. Un «Oi!» puede devolvérsela.','¡Ta-ra-rá! Suena la primera nota sobre la bahía.'],
+   ['florist','El nombre de Camila','Camila encontró un recuerdo pero olvidó cómo presentarse.','Camila sonríe y te entrega la primera pista.'],
+   ['cafe','La llave de la cortesía','Pedro prepara su cafetería para una visita especial y necesita palabras amables.','La cafetería se llena de colores y de música suave.'],
+   ['shop','Números en el mercado','Elisa quiere contar los objetos del carnaval y no recuerda los números.','Los números bailan sobre los puestos del mercado.'],
+   ['station','¿Cuándo comienza la fiesta?','Hugo tiene una invitación, pero debe averiguar el día y la hora.','El cartel del bondinho se enciende: ¡hay fiesta mañana!'],
+   ['teacher','Amigos del carnaval','La profesora reúne a las familias para recuperar una nueva melodía.','Se oye una melodía. Termina el primer arco: Río despierta.'],
+   ['florist','Una charla de playa','Camila quiere conversar contigo frente al mar para contarte un secreto.','Camila susurra la pista y se abre un nuevo camino.'],
+   ['cafe','Café con leche en Ipanema','Pedro necesita pedir y servir café con elegancia.','El aroma llega a la playa y la gente sonríe.'],
+   ['cafe','La mesa del churrasco','Un grupo de viajeros no logra pedir su cena. Ayuda a Pedro.','La cocina enciende sus llamas y el menú reaparece.'],
+   ['shop','Las tiendas del carnaval','Elisa vende disfraces y nadie sabe preguntar precios.','Los disfraces brillan de nuevo en el escaparate.'],
+   ['station','El mapa sin calles','Hugo debe guiar a un turista perdido y olvidó las direcciones.','Las calles de Santa Teresa reaparecen en el mapa.'],
+   ['station','El bondinho nocturno','El tranvía no parte hasta que alguien pida un pasaje con claridad.','El tranvía arranca y sus luces dibujan una ruta nueva.'],
+   ['florist','La habitación con vista','Camila gestiona una posada y un huésped llega sin reserva.','El huésped duerme feliz con vista al Pan de Azúcar.'],
+   ['station','Revisión del desvío','Un viaje entero con contratiempos: ayuda a Hugo a resolverlos.','Los carteles se encienden: superaste el gran desvío.'],
+   ['florist','Mi rutina carioca','Camila quiere conocer tu rutina diaria.','Camila te cuenta su día y su jardín se llena de colibríes.'],
+   ['teacher','Los verbos del samba','Los verbos esenciales perdieron el ritmo de la canción.','Los verbos vuelven en forma de percusión.'],
+   ['shop','Gustos y preferencias','Elisa quiere saber qué te gusta para elegir tu disfraz ideal.','Elisa te regala un disfraz que combina contigo.'],
+   ['cafe','Las preguntas de Pedro','Pedro guarda recetas secretas y solo las cuenta si sabes preguntar.','Pedro abre su cuaderno de recetas secretas.'],
+   ['station','Una reunión en el tranvía','Hugo debe coordinar a un equipo de trabajo dentro del tranvía.','El equipo se organiza y el tranvía suena como una orquesta.'],
+   ['florist','Mensajes y convites','Camila quiere invitar a toda la ciudad a la fiesta final.','Los mensajes vuelan como pájaros y la gente confirma asistencia.'],
+   ['teacher','Una charla sobre la fiesta','La profesora pide un balance de todo lo vivido hasta hoy.','Termina el cuarto arco: ya eres parte de Río.'],
+   ['shop','Lo que pasó anoche','Elisa recuerda un desfile pasado y necesita contarlo en pasado.','El desfile se proyecta en la plaza como un recuerdo.'],
+   ['shop','Los planes de la comparsa','Elisa organiza el futuro de la comparsa y necesita hablar de planes.','La comparsa ensaya con energía renovada.'],
+   ['cafe','Una emergencia en el café','Un cliente se siente mal y Pedro necesita pedir ayuda.','Llega la ayuda y todos aplauden la calma de Pedro.'],
+   ['teacher','Opiniones en la plaza','La profesora organiza una asamblea para decidir cómo será el carnaval.','Se vota con alegría y la plaza se llena de luces.'],
+   ['station','Un problema, una solución','El tranvía se detuvo. Ayuda a Hugo a explicar el problema y buscar una solución.','El tranvía arranca y el público vuelve a cantar.'],
+   ['shop','Marketing del carnaval','Elisa quiere promocionar el carnaval con campañas y clientes.','La campaña se vuelve viral y llegan visitantes.'],
+   ['cafe','El trato del carnaval','Pedro debe negociar condiciones para el gran banquete.','Se firma el trato y la plaza se llena de comida.'],
+   ['teacher','Un desafío de conversación','La profesora te pone a prueba con una conversación real.','Todos aplauden tu soltura y la bruma retrocede.'],
+   ['teacher','La gran presentación','Todo Río espera tu presentación final. Cuenta quién eres y propón una conversación.','Suena la canción completa: ¡Río celebra gracias a tu voz!']
+  ]
+ }
+};
+
+/* Recuerdos coleccionables: un objeto cultural por misión, se desbloquea al completarla. */
+window.STORY_DATA.souvenirs={
+ fr:['🕯️ Farol de bolsillo','🌻 Girasol de Camille','🥐 Croissant au beurre','📦 Caja de números','⏰ Engranaje del reloj','🖼️ Postal de Montmartre','✉️ Carta perfumada','☕ Taza de bienvenida','🧀 Tabla de quesos','🧵 Pañuelo de seda','🗺️ Mapa del Sena','🎫 Billete nocturno','🗝️ Llave de la posada','🧳 Maleta del viajero','🌷 Tulipán matinal','📖 Libro de verbos','🎞️ Postal antigua','🌈 Fragmento de arcoíris','🎻 Violín callejero','🔍 Lupa de Hugo','🏅 Medalla del barrio','🏪 Cartel de la tienda','📡 Antena de la estación','🎨 Paleta de colores','📜 Acta de la reunión','📣 Megáfono de campaña','📈 Gráfico dorado','🤝 Sello del acuerdo','🪞 Espejo de la plaza','🏮 Linterna de las Sombras'],
+ en:['🕰️ Péndulo en miniatura','🌸 Flor de Ava','🫖 Tetera de cortesía','📦 Caja de números','🚂 Billete de vapor','🖼️ Postal del Támesis','☂️ Paraguas del inspector','🍵 Taza de Earl Grey','🍽️ Menú de Baker Street','🧸 Juguete del mercado','🗺️ Mapa del río','🎫 Billete de las siete','🔑 Llave 221','🧳 Maleta de cuero','📔 Diario matutino','⚙️ Engranaje del reloj','📮 Postal victoriana','🌈 Fragmento de arcoíris','🎭 Máscara del teatro','🔍 Lupa de Henry','🏅 Medalla del barrio','🏪 Cartel de la tienda','📡 Antena de la estación','🎩 Sombrero de copa','📜 Acta de la reunión','📣 Megáfono de campaña','📈 Gráfico dorado','🤝 Sello del acuerdo','🪞 Espejo de la plaza','🔔 Campanada final'],
+ pt:['🎵 Primera nota','🌺 Flor de Camila','☕ Taza carioca','📦 Caja de números','🚋 Billete del bondinho','🎭 Máscara del carnaval','🏖️ Concha de Ipanema','🥛 Café con leche','🥩 Brocheta de churrasco','👗 Disfraz de plumas','🗺️ Mapa de Santa Teresa','🚋 Billete nocturno','🔑 Llave con vista','🧳 Maleta de playa','🐦 Colibrí de papel','🥁 Tambor pequeño','🎽 Camiseta de la comparsa','📓 Cuaderno de recetas','📡 Radio del tranvía','💌 Convite dorado','🏅 Medalla del barrio','🎞️ Foto del desfile','🪘 Pandereta','🚑 Silbato de ayuda','🗳️ Voto de la plaza','🔧 Llave del tranvía','📈 Gráfico dorado','🤝 Sello del trato','🎤 Micrófono del carnaval','🎶 Canción completa']
+};
